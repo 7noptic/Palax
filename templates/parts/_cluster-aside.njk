@@ -1,0 +1,24 @@
+<aside class="aside">
+    <nav class="aside__nav">
+        {% for link in [
+
+            {'title':'О нас','href':'about'},
+            {'title':'Кластеры','href':'types'},
+            {'title':'Мероприятия','href':'events'},
+            {'title':'Поддержка участников\nкластеров','href':''},
+            {'title':'Контакты','href':''}
+
+        ] %}
+            <a href="cluster-{{ link.href }}.html" class="aside__link {% if loop.index == asideActiveId %}active{% endif %}">
+                <span>{{ link.title | striptags(true) | escape | nl2br }}</span>
+                {{ macros.svgIcon('chevron-right','','','svg-icon') }}
+            </a>
+        {% endfor %}
+    </nav>
+
+    <a href="#" class="aside__btn va-middle">
+                    <span>Оформить <br>
+                    заявление на <br>
+                    получание услуг</span>
+    </a>
+</aside>

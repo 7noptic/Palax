@@ -1,0 +1,79 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'Центр поддержки предпринимательства' %}
+{% set breadcrumbs = [
+    {'name':'Главная','url':'index'}
+] %}
+{% set asideActiveId = 3 %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page content">
+        {% include 'parts/_pager.njk' %}
+
+        <h2 class="block-title block-title_big-icon page__title">
+            <i>
+                {{ macros.svgIcon('graph','gold') }}
+            </i>
+            <span>Центр поддержки предпринимательства</span>
+        </h2>
+
+        <div class="page__content flex-container">
+            {% include 'parts/_growing-aside.njk' %}
+
+            <div class="page__right">
+                <div class="b-content__desc b-h6">
+                    <p>Мы приглашаем на деловые мероприятия представителей субъектов малого и среднего
+                        предпринимательства. Если вы хотите принять участие в мероприятиях фонда, следите за
+                        обновлениями на нашем сайте или заполните заявку.</p>
+                    <p>Участие бесплатное!</p>
+                    <p><a href="#">Скачать план деловых мероприятий фонда</a></p>
+                </div>
+
+                <div class="b-space_md"></div>
+
+                <div class="b-table b-table_2">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Вид
+                                мероприятия
+                            </th>
+                            <th>Тема
+                                мероприятия
+                            </th>
+                            <th>Место
+                                проведения
+                                мероприятия
+                            </th>
+                            <th>Дата
+                                проведения
+                                мероприятия
+                            </th>
+                            <th>Запись на
+                                мероприятие</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Семинар</td>
+                            <td>«SMM. Продвижение в социальных сетях»<br>
+                                <a href="#">Скачать программу</a>
+                            </td>
+                            <td>г. Киров, ул. Молодой Гвардии, 84/1</td>
+                            <td>12.09.2019
+                                09:30 – 15:30
+                            </td>
+                            <td><a href="#event" class="js-modal-open">Записаться</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div><!--profile__content-->
+    </section><!--page-->
+
+{% endblock content %}

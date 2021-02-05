@@ -1,0 +1,76 @@
+<section class="nav-bar">
+    <div class="nav-bar__content spacer">
+        <div class="nav-bar__left">
+            <a href="index.html" class="logo"></a>
+            <span class="crest">
+                    <i class="crest__logo"></i>
+                    <span>Правительство <br> Кировской <br> области</span>
+                </span>
+
+        </div><!--nav-bar__left-->
+
+        {% set links = [
+
+            {'href':'business','title':'О Центре «Мой Бизнес»'},
+            {'href':'types-1','title':'Меры поддержки'},
+            {'href':'events','title':'Мероприятия'},
+            {'href':'news','title':'Новости'},
+            {'href':'ambassadors','title':'Амбассадоры'},
+            {'href':'contacts','title':'Контакты'}
+
+        ] %}
+
+        <nav class="nav spacer">
+            {% for link in links %}
+                <a href="{{ link.href }}.html" class="nav__link">
+                    <span class="nav__link-icon">
+                        <i class="icon icon-nav-{{ loop.index }} pos-center"></i>
+                    </span>
+
+                    <span class="nav__link-title">{{ link.title }}</span>
+                </a>
+            {% endfor %}
+        </nav>
+
+        <div class="controls spacer">
+            <a href="javascript:window.print()" class="controls__link">
+                <i class="icon icon-control-1 pos-center"></i>
+            </a>
+
+            <a href="#" class="controls__link">
+                <i class="icon icon-control-2 pos-center"></i>
+            </a>
+
+            <a id="specialButton" href="#" class="controls__link">
+                <i class="icon icon-control-3 pos-center"></i>
+            </a>
+
+            <div class="controls__link b-dropdown">
+                <button class="b-dropdown__toggle"><i class="icon icon-control-4 pos-center"></i></button>
+                <div class="b-dropdown__menu">
+                    <a href="tel:88000000000">Позвонить</a>
+                    <a href="#">Заказать звонок</a>
+                </div>
+            </div>
+
+            <div class="menu">
+                <nav class="nav spacer">
+                    {% for link in links %}
+                        <a href="{{ link.href }}.html" class="nav__link">
+                    <span class="nav__link-icon">
+                        <i class="icon icon-nav-{{ loop.index }} pos-center"></i>
+                    </span>
+
+                            <span class="nav__link-title">{{ link.title }}</span>
+                        </a>
+                    {% endfor %}
+                </nav>
+            </div>
+
+        </div><!--controls-->
+
+        <span class="menu__btn"></span>
+
+    </div><!--nav-bar__content-->
+
+</section><!--nav-bar-->

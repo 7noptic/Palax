@@ -1,0 +1,54 @@
+{% import 'components/_macros.njk' as macros %}
+
+<header class="header">
+    <div class="content spacer">
+        {% if pageName != 'Поиск' %}
+        <div class="social">
+            <a href="#" class="social__link">
+                <i class="icon icon-ytb pos-center"></i>
+            </a>
+
+            <a href="#" class="social__link">
+                <i class="icon icon-vk pos-center"></i>
+            </a>
+
+            <a href="#" class="social__link">
+                <i class="icon icon-fb pos-center"></i>
+            </a>
+
+            <a href="#" class="social__link">
+                <i class="icon icon-inst pos-center"></i>
+            </a>
+
+        </div>
+        {% else %}
+            <form action="" class="header__search">
+                <input type="text" class="app__field app__field_big" placeholder="Поиск...">
+                <input type="submit" class="header__search-submit">
+            </form>
+        {% endif %}
+
+        <div class="header__right">
+            {% if pageName != 'Поиск' %}
+                <a href="contest.html" class="header__link">Конкурсы и закупки</a>
+            {% endif %}
+            {% if pageName == 'ПРОФИЛЬ' %}
+                <a href="profile.html" class="header__link header__link_login">
+                    <span class="header__auth">
+                        {{ macros.svgIcon('user', 'white') }}
+                    </span>
+                </a>
+            {% else %}
+                <a href="#signin" class="header__link header__link_login js-modal-open">
+                    <i class="icon icon-login"></i>
+                    <span>Вход / Регистрация</span>
+                </a>
+            {% endif %}
+            <a href="#" class="header__bookmark">
+                <i class="icon icon-bookmark"></i>
+            </a>
+
+        </div><!--header__right-->
+
+    </div><!--content-->
+</header>

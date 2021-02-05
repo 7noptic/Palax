@@ -1,0 +1,107 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'Меры поддержки' %}
+{% set breadcrumbs = [
+    {'name':'Главная','url':'index'}
+] %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page content">
+        {% include 'parts/_pager.njk' %}
+
+        <h2 class="block-title page__title">
+            <i>
+                {{ macros.svgIcon('question','gold') }}
+            </i>
+            <span>Меры поддержки</span>
+        </h2>
+
+        <div class="types__list">
+            <a href="types-2.html" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        {{ macros.svgIcon('cash-more') }}
+                        <span class="types__item-title">
+                            Финансовая
+                            <span class="br">поддержка</span>
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="growing-about.html" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        <i class="icon icon-type-8"></i>
+                        <span class="types__item-title">
+                            Центр поддержки
+                            <span class="br">предпринимательства</span>
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="cluster-about.html" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        <i class="icon icon-type-9"></i>
+                        <span class="types__item-title">
+                            Центр кластерного
+                            <span class="br">развития</span>
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="export-about.html" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        {{ macros.svgIcon('export') }}
+                        <span class="types__item-title">
+                            Центр поддержки
+                            <span class="br">экспорта</span>
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+        </div><!--types__list-->
+
+    </section><!--page-->
+
+{% endblock content %}

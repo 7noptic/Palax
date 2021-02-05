@@ -1,0 +1,9 @@
+{% if breadcrumbs | length > 0 %}
+<div class="pager">
+    {% for link in breadcrumbs %}
+        <a href="{{ link.url }}.html" class="pager__link">{{ link.name }}</a>
+        <i class="pager__colon">></i>
+    {% endfor %}
+    <span class="pager__active">{{ pageName }}</span>
+</div>
+{% endif %}

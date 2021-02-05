@@ -1,0 +1,75 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'Центр поддержки предпринимательства' %}
+{% set breadcrumbs = [
+    {'name':'Главная','url':'index'}
+] %}
+{% set asideActiveId = 4 %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page content">
+        {% include 'parts/_pager.njk' %}
+
+        <h2 class="block-title block-title_big-icon page__title">
+            <i>
+                {{ macros.svgIcon('graph','gold') }}
+            </i>
+            <span>Центр поддержки предпринимательства</span>
+        </h2>
+
+        <div class="page__content flex-container">
+            {% include 'parts/_growing-aside.njk' %}
+
+            <div class="page__right">
+                <div class="b-content__desc b-h6">
+                    <p>Центр поддержки предпринимательства финансирует участие субъектов малого и среднего
+                        предпринимательства в выставочных мероприятиях на территории Российской Федерации в
+                        формате:</p>
+                    <ol>
+                        <li>1) индивидуального стенда (<a href="#">информация по финансированию индивидуального участия предприятий
+                                на 2019 год представлена здесь</a>)
+                        </li>
+                        <li>2) коллективного стенда предприятий Кировской области.</li>
+                    </ol>
+                    <div class="b-space_sm"></div>
+                    <p>По вопросам участия в выставках обращайтесь по телефону: <a href="tel:8332647010">(8332) 64-70-10</a>.</p>
+                </div>
+
+                <div class="b-space_md"></div>
+
+                <div class="b-table b-table_2">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th width="344">Название выставок, финансирование которых предусмотрено в формате коллективного стенда
+                            </th>
+                            <th>Даты
+                                проведения
+                            </th>
+                            <th>Статус</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Международная выставка «Собственная Торговая Марка» (IPLS) (г. Москва, МВЦ
+                                «КрокусЭкспо»)
+                            </td>
+                            <td>20-21
+                                марта 2019
+                                года
+                            </td>
+                            <td><ins>Начало приема заявок 08 часов 00 минут 29 января 2019 года;<br>
+                                    Окончание приема заявок 15 часов 00 минут 21 февраля 2019 года.</ins></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div><!--profile__content-->
+    </section><!--page-->
+
+{% endblock content %}

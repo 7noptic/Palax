@@ -1,0 +1,98 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'Контакты' %}
+{% set breadcrumbs = [{'name':'Главная','url':'index'}] %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page content">
+        {% include 'parts/_pager.njk' %}
+
+        <h2 class="block-title page__title">
+            <i>
+                {{ macros.svgIcon('surface','gold') }}
+            </i>
+            <span>Контакты</span>
+        </h2>
+
+        <div class="b-space"></div>
+
+        <div class="b-block-grid b-block-grid_small_1 b-block-grid_medium_2 b-block-grid_large_3">
+            {% for item in [
+
+                {'icon':'graph','title':'Центр поддержки предпринимательства'},
+                {'icon':'arator','title':'Центр кластерного развития'},
+                {'icon':'export','title':'Центр поддержки экспорта'},
+                {'icon':'hand-coins','title':'Кредитный отдел'},
+                {'icon':'libra','title':'Юридический отдел'},
+                {'icon':'doc-copy','title':'Бухгалтерия'}
+
+            ] %}
+            <div class="b-block-grid__item">
+                <div class="b-contacts-item">
+                    <div class="b-contacts-item__header">
+                        <div class="b-contacts-item__icon">{{ macros.svgIcon(item.icon, 'gold') }}</div>
+                        <div class="b-contacts-item__title">{{ item.title }}</div>
+                    </div>
+                    <ul class="b-contacts-item__list">
+                        <li>Телефон:</li>
+                        <li>E-mail:</li>
+                    </ul>
+                </div>
+                <div class="b-space_sm b-visible_medium_up"></div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="b-space b-visible_medium_up"></div>
+        <div class="b-space b-visible_large_up"></div>
+        <div class="b-space b-visible_xlarge_up"></div>
+
+        <div class="b-contacts-info">
+            <div class="b-contacts-info__col">
+                <div class="b-contacts-info__item">
+                    <div class="b-contacts-info__header">
+                        {{ macros.svgIcon('envelope-opened', 'brown4') }}
+                        <span>Почта:</span>
+                    </div>
+
+                    <div class="b-contacts-info__desc"><a href="mailto:mail@kfpp.ru">mail@kfpp.ru</a></div>
+                </div>
+
+                <div class="b-contacts-info__item">
+                    <div class="b-contacts-info__header">
+                        {{ macros.svgIcon('placemark', 'brown4') }}
+                        <span>Адрес:</span>
+                    </div>
+
+                    <div class="b-contacts-info__desc">г.Киров, Динамовский проезд,<br>дом 4, 2 этаж</div>
+                </div>
+            </div>
+            <div class="b-contacts-info__col">
+                <div class="b-space b-hide_large_up"></div>
+
+                <div class="b-contacts-info__item">
+                    <div class="b-contacts-info__header">
+                        {{ macros.svgIcon('clock', 'brown4') }}
+                        <span>График работы:</span>
+                    </div>
+
+                    <ul class="b-contacts-info__list">
+                        <li><strong>Пн-Чт:</strong> 8.00-17.00</li>
+                        <li><strong>Пт:</strong> 8.00-15.45</li>
+                        <li><strong>Перерыв:</strong> 12.00-12.45</li>
+                        <li><strong>Сб-Вс:</strong> выходной</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    {% include 'parts/_registration.njk' %}
+
+    {% include 'parts/_map.njk' %}
+
+{% endblock content %}

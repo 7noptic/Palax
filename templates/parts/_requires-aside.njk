@@ -1,0 +1,25 @@
+<aside class="aside">
+    <nav class="aside__nav">
+        {% for link in [
+
+            {'title':'Профиль','href':'requires-profile'},
+            {'title':'Избранное','href':'requires-'},
+            {'title':'Оформление заказа услуг','href':'requires'},
+            {'title':'Консультации','href':'requires-'},
+            {'title':'Мои обращения','href':'requires-'},
+            {'title':'Уведомления','href':'requires-'},
+            {'title':'Выход','href':'requires-'}
+
+        ] %}
+            <a href="{{ link.href }}.html" class="aside__link {% if loop.index == asideActiveId %}active{% endif %}">
+                <span>{{ link.title | striptags(true) | escape | nl2br }}</span>
+                {{ macros.svgIcon('chevron-right','','','svg-icon') }}
+            </a>
+        {% endfor %}
+    </nav>
+
+</aside>
+
+
+
+

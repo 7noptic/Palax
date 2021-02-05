@@ -1,0 +1,53 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'Центр поддержки предпринимательства' %}
+{% set breadcrumbs = [
+    {'name':'Главная','url':'index'}
+] %}
+{% set asideActiveId = 2 %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page content">
+        {% include 'parts/_pager.njk' %}
+
+        <h2 class="block-title block-title_big-icon page__title">
+            <i>
+                {{ macros.svgIcon('arator','gold') }}
+            </i>
+            <span>Центр кластерного развития</span>
+        </h2>
+
+        <div class="page__content flex-container">
+            {% include 'parts/_cluster-aside.njk' %}
+
+            <div class="page__right">
+                <div class="b-block-grid b-block-grid_small_1 b-block-grid_medium_2">
+                    {% for i in [1,2] %}
+                    <div class="b-block-grid__item">
+                        <a href="#" class="b-cluster-item b-bg"
+                             style="background-image: url('./assets/images/logo-pharma.jpg')">
+                            <div class="b-cluster-item__content">
+                                <div class="b-cluster-item__title">БИОФАРМАЦЕВТИЧЕСКИЙ КЛАСТЕР<br>
+                                    “ВЯТКА-БИОПОЛИС”
+                                </div>
+
+                                <div class="b-cluster-item__row">
+                                    <span>Участников: 4</span>
+                                    <span>Проектов: 0</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    {% include 'parts/_question.njk' %}
+
+{% endblock content %}

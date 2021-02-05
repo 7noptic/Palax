@@ -1,0 +1,6 @@
+{% macro svgIcon(name, color, fill, class, size) %}
+    <svg class="b{% if fill %}-fill{% endif %}-svg b{% if fill %}-fill{% endif %}-svg_{{ name }} {% if color %}b-color_{{ color }}{% endif %}{% if class %} {{ class }}{% endif %}"
+         {% if size %}style="font-size: {{ size }}"{% endif %}>
+        <use xlink:href="./assets/images/sprite{% if fill %}-fill{% endif %}.svg#{{ name }}"></use>
+    </svg>
+{% endmacro %}

@@ -1,0 +1,65 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'Финансовая поддержка' %}
+{% set breadcrumbs = [
+    {'name':'Главная','url':'index'}
+] %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page content">
+        {% include 'parts/_pager.njk' %}
+
+        <h2 class="block-title page__title">
+            <i>
+                {{ macros.svgIcon('cash-more','gold','','','24px') }}
+            </i>
+            <span>Финансовая поддержка</span>
+        </h2>
+
+        <div class="types__list types__list_left">
+            <a href="types-single-3.html" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                         {{ macros.svgIcon('cash-outline') }}
+                        <span class="types__item-title">
+                            Займы бизнесу
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="types-3.html" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        {{ macros.svgIcon('deal','','','','24px') }}
+                        <span class="types__item-title">
+                            Поручительство
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+        </div><!--types__list-->
+
+    </section><!--page-->
+
+{% endblock content %}

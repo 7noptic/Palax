@@ -1,0 +1,75 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'Амбассадоры' %}
+{% set breadcrumbs = [{'name':'Главная','url':'index'}] %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page content">
+        {% include 'parts/_pager.njk' %}
+
+        <h2 class="block-title page__title">
+            <i class="b-icon b-icon_star"></i>
+            <span>Амбассадоры</span>
+        </h2>
+
+        <div class="b-space"></div>
+
+        <div class="b-block-grid b-block-grid_small_1 b-block-grid_medium_3 b-block-grid_large_4 b-block-grid_xlarge_5">
+            {% for i in [1,2,3,4,5] %}
+            <div class="b-block-grid__item">
+                <a href="ambassadors-single.html" class="b-person">
+                    <div class="b-person__photo b-bg"
+                         style="background-image: url('./assets/images/person.jpg')"></div>
+                    <div class="b-person__name">Иванов Иван</div>
+                    <div class="b-person__status">ГЕНЕРАЛЬНЫЙ
+                        ДИРЕКТОР КОМПАНИИ
+                        ПО РАЗВИТИЮ НЕФТЯНОЙ
+                        ПРОМЫШЛЕННОСТИ</div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="b-space"></div>
+        <div class="b-space b-visible_medium_up"></div>
+        <div class="b-space b-visible_large_up"></div>
+        <div class="b-space b-visible_xlarge_up"></div>
+
+        <div class="b-h3 b-ta_center b-ttrans_uppercase b-fw_500">{{ macros.svgIcon('microphone', 'gold') }} НОВОСТИ ЦЕНТРА МОЙ БИЗНЕС</div>
+
+        <div class="news">
+            <div class="news__slider">
+                <div class="news__slides">
+                    {% for slide in [1,2,3,4,5] %}
+                    <div class="news__slide">
+                        <div class="news__item">
+                            <div class="news__item-header">
+                                <a href="#" class="news__item-title" tabindex="0">
+                                    Нижегородские центры МСП
+                                    получат более 11 млн руб
+                                </a>
+
+                                <a href="#" class="news__item-bookmark" tabindex="0">
+                                    {{ macros.svgIcon('bookmark','red','','pos-center') }}
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <p class="news__item-desc">
+                                    Власти Краснодарского края направят 118 млн рублей на поддержку начинающих фермеров по
+                                    программе "Агростартап", сообщил вице-губернатор региона Андрей Коробка.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </section><!--page-->
+
+{% endblock content %}

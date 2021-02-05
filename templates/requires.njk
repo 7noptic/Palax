@@ -1,0 +1,246 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'Предоставление микрозаймов' %}
+{% set breadcrumbs = [{'name':'Предоставление микрозаймов','url':'index'}] %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+<section class="page content">
+    {% include 'parts/_pager.njk' %}
+
+    <h2 class="block-title page__title">
+        <i>
+            {{ macros.svgIcon('requiresimg','black') }}
+        </i>
+        <span>Предоставление микрозаймов</span>
+    </h2>
+    <div class="b-space"></div>
+
+    <div class="page__content flex-container">
+        {% include 'parts/_requires-aside.njk' %}
+
+        <div class="page__right">
+
+            <div class="microloan">
+                <h3 class="microloan__title">
+                    Заявление о предоставлении услуги центром «Мой бизнес»
+                    <br>
+                    по предоставление микрозаймов субъектам малого и среднего предпринимательства Кировской области
+                </h3>
+                <p class="microloan__text">
+                    Для получения этой формы поддержки необходимо заполнить форму ниже
+                    <br>
+                    Для скорейшей обработки заявки важно заполнить подробно все поля.
+                </p>
+                <nav class="microloan__nav">
+                    <ul class="microloan__navlist">
+                        <li class="microloan__navlink active">Шаг 1
+                            <svg width="9" height="18" viewBox="0 0 9 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.14819 17.2542L7.21252 9.09619L1.14819 0.938232" stroke="#8C8C8C"
+                                      stroke-width="2"/>
+                            </svg>
+                        </li>
+                        <li class="microloan__navlink next-step">Шаг 2
+                            <svg width="9" height="18" viewBox="0 0 9 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.14819 17.2542L7.21252 9.09619L1.14819 0.938232" stroke="#8C8C8C"
+                                      stroke-width="2"/>
+                            </svg>
+                        </li>
+                        <li class="microloan__navlink">Шаг 3
+                            <svg width="9" height="18" viewBox="0 0 9 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.14819 17.2542L7.21252 9.09619L1.14819 0.938232" stroke="#8C8C8C"
+                                      stroke-width="2"/>
+                            </svg>
+                        </li>
+                        <li class="microloan__navlink">Шаг 4</li>
+                    </ul>
+                </nav>
+
+                <form action="POST" class="microloan__form">
+                    <label for="status1" class="microloan__subtitle-red">
+                        Выберите получателя поддержки <span
+                            data-tooltip="ИНН получателя поддержки важно предоставлять в соответствии с Приказом Министерства Кировской области №14 от 12 марта 2020 г , именно на основании проверки ИНН будет осуществляться поддержка"
+                            class="tooltip top">?</span>
+                    </label>
+                    <div class="microloan__radio">
+
+                        <input class="microloan__check microloan__check-circle" type="radio" id="status1"
+                               name="status" value="ip">
+                        <label for="status1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                            ligula eget dolor. Aenean k k oiop ssa. Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Lorem ipsum dolor sit amet, onsectetu
+                            er adipiscing elit. Aenean commodo ligula eget dolor. Aenean massaAenean </label>
+
+                        <input class="microloan__check microloan__check-circle" type="radio" id="status2"
+                               name="status" value="yr">
+                        <label for="status2">Юридическое лицо</label>
+                    </div>
+                    <div class="microloan__info">
+                        <label for="fio" class="microloan__subtitle-red">
+                            ФИО
+                        </label>
+                        <input type="text" class="microloan__input microloan__input-long" id="fio">
+
+                        <label for="organization" class="microloan__subtitle-red">
+                            Организация
+                        </label>
+                        <input type="text" class="microloan__input microloan__input-long" id="organization">
+
+                        <label for="tel" class="microloan__subtitle-red">
+                            Телефон:
+                        </label>
+                        <input type="tel" class="microloan__input microloan__input-short js-required js-num js-tel"
+                               id="tel"
+                               placeholder="+7 _ _ _ - _ _ _-_ _-_ _">
+
+                        <label for="email" class="microloan__subtitle-red">
+                            E-mail:
+                        </label>
+                        <input type="email" class="microloan__input microloan__input-short js-required" id="email">
+
+                        <label for="inn" class="microloan__subtitle-red">
+                            ИНН:
+                        </label>
+                        <input type="text" class="microloan__input microloan__input-short js-required js-num" id="inn"
+                               maxlength="12">
+
+                        <label for="ogrn" class="microloan__subtitle-red">
+                            ОГРН:
+                        </label>
+                        <input type="number" class="microloan__input microloan__input-short js-num" id="ogrn"
+                               maxlength="13">
+
+                        <label for="additionally" class="microloan__subtitle-red">
+                            Дополнительно:
+                        </label>
+                        <textarea name="additionally" id="additionally" cols="30" rows="10"
+                                  class="microloan__textarea js-required"></textarea>
+
+                        <label for="terms1" class="microloan__subtitle-red">
+                            Выберите условия займа:
+                        </label>
+                        <div class="microloan__checkbox">
+                            <div>
+                                <input class="microloan__check microloan__check-square" type="checkbox" id="terms1"
+                                       name="terms" value="ip">
+                                <label for="terms1">Без комиссий и страховок</label>
+                            </div>
+                            <div>
+                                <input class="microloan__check microloan__check-square" type="checkbox" id="terms2"
+                                       name="terms" value="ip">
+                                <label for="terms2">График платежей по выбору заемщика</label>
+                            </div>
+                            <div>
+                                <input class="microloan__check microloan__check-square" type="checkbox" id="terms3"
+                                       name="terms" value="ip">
+                                <label for="terms3">Возможность досрочного погашения</label>
+                            </div>
+                            <div>
+                                <input class="microloan__check microloan__check-square" type="checkbox" id="terms4"
+                                       name="terms" value="ip">
+                                <label for="terms4">Возможность досрочного погашения</label>
+                            </div>
+                        </div>
+
+                        <label for="size" class="microloan__subtitle-red">
+                            Укажите размер необходимого займа* <span
+                                data-tooltip="ИНН получателя поддержки важно предоставлять в соответствии с Приказом Министерства Кировской области №14 от 12 марта 2020 г , именно на основании проверки ИНН будет осуществляться поддержка"
+                                class="tooltip top">?</span>
+                        </label>
+                        <input dir="rtl" type="text" class="microloan__input microloan__input-short js-required js-num"
+                               id="size"
+                               placeholder="0">
+                        <span class="microloan__subtext-right">
+                            руб
+                        </span>
+                        <div class="microloan__range-container">
+                            <input class="microloan__range" id="myRange" type="range" min="30000" max="500000"
+                                   step="1000" value="30000" placeholder="Первоначальный взнос, руб">
+                            <p class="microloan__range-value"><span id="demo"></span></p>
+                            <label for="size" class="microloan__subtitle-red">
+                                Первоначальный взнос, руб
+                            </label>
+                            <div class="microloan__range-size">
+                                <p>30 000</p>
+                                <p>500 000</p>
+                            </div>
+                        </div>
+
+
+                        <input class="microloan__check microloan__check-oval" type="checkbox" id="agreement"
+                               name="status" value="yr">
+                        <label for="agreement" class="microloan__subtext-bottom">Даю согласие на получение информации о
+                            предстоящих мероприятиях</label>
+
+
+                            <label for="upload-inn" class="microloan__subtitle-red">ИНН</label>
+                        <div class="js-file-btn">
+                            <label for="upload-inn" class="microloan__btn microloan__btn-red microloan__upload-btn">
+                                <svg width="24" height="21" viewBox="0 0 24 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.2427 7.00246L10.6769 6.9977L10.6494 15.9977L6.80073 15.9905L11.917 21L17.0639 16.0096L13.2152 16.0024L13.2427 7.00246Z"
+                                          fill="white"/>
+                                    <path d="M20.9585 1.01678L2.99788 0.983416C1.58284 0.980787 0.429342 1.87565 0.42597 2.97864L0.398457 11.9786C0.395086 13.0816 1.5431 13.9808 2.95814 13.9834L8.08974 13.9929L8.09585 11.9929L2.96426 11.9834L2.99177 2.98341L20.9524 3.01677L20.9248 12.0167L15.7933 12.0072L15.7871 14.0072L20.9187 14.0167C22.3338 14.0194 23.4873 13.1245 23.4906 12.0215L23.5182 3.02154C23.5215 1.91854 22.3735 1.0194 20.9585 1.01678Z"
+                                          fill="white"/>
+                                </svg>
+                                Загрузить
+                            </label>
+                            <input type="file" class="microloan__upload-photo js-file" name="upload-inn" id="upload-inn"
+                                   accept="image/jpeg,image/png,image/gif">
+                            <p class="microloan__subtext js-file-text">
+                                Размер файла не болеее 10 Мб
+                            </p>
+                        </div>
+
+                        <div class="file-result">
+                            <div class="file-result__result js-result">
+
+                            </div>
+                            <a href="" class="file-result__delete js-result-delete">
+                                удалить
+                            </a>
+                        </div>
+
+                        <label for="category" class="microloan__subtitle-red">
+                            Категория получателя:
+                        </label>
+
+                        <select name="category" id="category" class="select microloan__select microloan__select-long">
+                            <option value="ip">Индивидуальный предприниматель</option>
+                            <option value="mp">Малое предприятие Критерии малых предприятий в 2021 году установлены ст.
+                                4 Федерального закона от 24.07.2007 № 209-ФЗ.
+                            </option>
+                            <option value="sp">Среднее предприятие</option>
+                        </select>
+
+                        <label for="date" class="microloan__subtitle-red">
+                            Дата заявления:
+                        </label>
+                        <input type="date" class="microloan__date microloan__date-short" id="date">
+                        <div class="microloan__buttons">
+                            <p class="microloan__subtitle-red microloan__error">
+                                Одно или несколько обязательных полей не заполнено. Пожалуйста, заполните их.
+                            </p>
+                            <a href="#" class="microloan__btn microloan__btn-brown">Назад</a>
+                            <a href="#" class="microloan__btn microloan__btn-white">сохранить</a>
+                            <button type="submit" class="microloan__btn microloan__btn-red" id="validateBtn">Далее
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<a href="#cookie" class="js-modal-open">open cookie modal</a>
+
+{% endblock content %}

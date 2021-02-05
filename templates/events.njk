@@ -1,0 +1,59 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'Мероприятия' %}
+{% set breadcrumbs = [{'name':'Главная','url':'index'}] %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page content">
+        {% include 'parts/_pager.njk' %}
+
+        <h2 class="block-title page__title">
+            <i class="b-icon b-icon_calendar"></i>
+            <span>Мероприятия</span>
+        </h2>
+
+        <div class="b-space"></div>
+
+        <div class="b-block-grid b-block-grid_small_1 b-block-grid_medium_2 b-block-grid_xlarge_3">
+            <div class="b-block-grid__item">
+                <div id="calendar" class="b-calendar"></div>
+            </div>
+            {% for i in [1,2,3,4,5,6,7,8] %}
+            <div class="b-block-grid__item">
+                <div class="events__item events__item_fh events__item_m0 va-middle">
+                    <span class="events__item-month events__item-month_right">Сентябрь</span>
+                    <span class="events__item-day">9</span>
+
+                    <div class="events__item-right">
+                        <p class="events__item-date">
+                            <span>2019-09-09</span> <span>09:37:46</span>
+                        </p>
+
+                        <a href="#" class="events__item-title" tabindex="0">
+                            СУБСИДИИ БИЗНЕСУ
+                        </a>
+
+                        <div class="tags">
+                            <a href="#" class="tags__tag" tabindex="0">#субсидии</a>
+                            <a href="#" class="tags__tag" tabindex="0">#бизнес</a>
+                            <a href="#" class="tags__tag" tabindex="0">#мойбизнес22</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="b-space_sm"></div>
+
+        <div class="b-ta_center">
+            <a href="#" class="b-btn b-btn_red b-btn_h49 b-btn_shadow">Показать еще</a>
+        </div>
+
+
+    </section><!--page-->
+
+{% endblock content %}

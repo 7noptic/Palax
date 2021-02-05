@@ -1,0 +1,71 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'О центре “Мой бизнес”' %}
+{% set breadcrumbs = [
+    {'name':'Главная','url':'index'},
+    {'name':'Финансовая поддержка','url':'types-2'}
+] %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page content">
+        {% include 'parts/_pager.njk' %}
+
+        <h2 class="block-title block-title_no-icon page__title">
+            <span>Предоставление поручительств по банковским кредитам</span>
+        </h2>
+
+        <div class="types__list types__list_left">
+            <a href="types-single-1.html" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        {{ macros.svgIcon('doc') }}
+                        <span class="types__item-title">
+                            Предоставление
+                            <span class="br">поручительств</span>
+                            КОФПМСП (МКК)
+                            <span class="br">по банковским</span>
+                            кредитам
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="types-single-2.html" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        {{ macros.svgIcon('cash-outline','','','','40px') }}
+                        <span class="types__item-title">
+                            Предоставление
+                            <span class="br">поручительств</span>
+                            по банковским
+                            <span class="br">кредитам совместно с</span>
+                            АО “Корпорация”МСП”
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+        </div><!--types__list-->
+
+    </section><!--page-->
+
+{% endblock content %}

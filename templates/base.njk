@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ pageName }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
+    <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
+</head>
+<body>
+<section class="page-wrap">
+    <section>
+        {% include 'parts/_header.njk' %}
+
+        {% include 'parts/_nav-bar.njk' %}
+    </section>
+
+    <main>
+        {% block content %}{% endblock content %}
+
+        <div class="b-space b-hide_large_up"></div>
+    </main>
+
+    <section>
+        {% include 'parts/_footer.njk' %}
+
+        {% include 'parts/_scroll-top.njk' %}
+    </section>
+</section>
+
+<div class="b-hide_small_up">
+    {% include 'modals/_signin.njk' %}
+    {% include 'modals/_recover.njk' %}
+    {% include 'modals/_signup.njk' %}
+    {% include 'modals/_event.njk' %}
+    {% include 'modals/_cookie.njk' %}
+</div>
+
+<script src="assets/js/vendor/calendar/jsCalendar.min.js"></script>
+<script src="assets/js/vendor/calendar/jsCalendar.lang.ru.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

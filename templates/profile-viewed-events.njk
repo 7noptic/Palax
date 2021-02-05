@@ -1,0 +1,117 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'ПРОФИЛЬ' %}
+{% set asideActiveId = 4 %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page profile content">
+        {% include 'parts/_pager.njk' %}
+
+        <h2 class="block-title page__title">
+            <i>
+                {{ macros.svgIcon('user','gold','','','32px') }}
+            </i>
+            <span>ПРОФИЛЬ</span>
+        </h2>
+
+        <div class="profile__content flex-container">
+            {% include 'parts/_profile-aside.njk' %}
+
+            <div class="profile__right">
+                <div class="events__list flex-container">
+                    <div class="events__item va-middle">
+                        <span class="events__item-day">9</span>
+                        <div class="events__item-right">
+                            <p class="events__item-date">
+                                <span>2019-09-09</span> <span>09:37:46</span>
+                            </p>
+
+                            <a href="#" class="events__item-title events__item-title_big">
+                                СУБСИДИИ БИЗНЕСУ
+                            </a>
+
+                            <div class="tags">
+                                <a href="#" class="tags__tag">#субсидии</a>
+                                <a href="#" class="tags__tag">#бизнес</a>
+                                <a href="#" class="tags__tag">#мойбизнес22</a>
+                            </div><!--tags-->
+
+                        </div><!--events__item-right-->
+
+                    </div><!--events__item-->
+
+                    <div class="events__item va-middle">
+                        <span class="events__item-day">9</span>
+                        <div class="events__item-right">
+                            <p class="events__item-date">
+                                <span>2019-09-09</span> <span>09:37:46</span>
+                            </p>
+
+                            <a href="#" class="events__item-title events__item-title_big">
+                                СУБСИДИИ БИЗНЕСУ
+                            </a>
+
+                            <div class="tags">
+                                <a href="#" class="tags__tag">#субсидии</a>
+                                <a href="#" class="tags__tag">#бизнес</a>
+                                <a href="#" class="tags__tag">#мойбизнес22</a>
+                            </div><!--tags-->
+
+                        </div><!--events__item-right-->
+
+                    </div><!--events__item-->
+
+                    <div class="events__item va-middle">
+                        <span class="events__item-day">9</span>
+                        <div class="events__item-right">
+                            <p class="events__item-date">
+                                <span>2019-09-09</span> <span>09:37:46</span>
+                            </p>
+
+                            <a href="#" class="events__item-title events__item-title_big">
+                                СУБСИДИИ БИЗНЕСУ
+                            </a>
+
+                            <div class="tags">
+                                <a href="#" class="tags__tag">#субсидии</a>
+                                <a href="#" class="tags__tag">#бизнес</a>
+                                <a href="#" class="tags__tag">#мойбизнес22</a>
+                            </div><!--tags-->
+
+                        </div><!--events__item-right-->
+
+                    </div><!--events__item-->
+
+                    <div class="events__item va-middle">
+                        <span class="events__item-day">9</span>
+                        <div class="events__item-right">
+                            <p class="events__item-date">
+                                <span>2019-09-09</span> <span>09:37:46</span>
+                            </p>
+
+                            <a href="#" class="events__item-title events__item-title_big">
+                                СУБСИДИИ БИЗНЕСУ
+                            </a>
+
+                            <div class="tags">
+                                <a href="#" class="tags__tag">#субсидии</a>
+                                <a href="#" class="tags__tag">#бизнес</a>
+                                <a href="#" class="tags__tag">#мойбизнес22</a>
+                            </div><!--tags-->
+
+                        </div><!--events__item-right-->
+
+                    </div><!--events__item-->
+
+                </div><!--events__list-->
+
+            </div>
+
+        </div><!--profile__content-->
+
+    </section><!--page-->
+
+{% endblock content %}

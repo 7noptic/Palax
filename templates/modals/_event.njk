@@ -1,0 +1,86 @@
+<div id="event" class="b-modal__modal b-modal__modal_w700">
+
+    <div class="b-modal__title b-h4">Заявка на участие в мероприятии</div>
+
+    <form action="">
+
+        <div class="b-block-grid b-block-grid_small_1 b-block-grid_medium_2">
+            {% for input in [
+
+                {'type':'text','label':'Ваше имя'},
+                {'type':'text','label':'Компания'},
+                {'type':'text','label':'Сфера деятельности'},
+                {'type':'text','label':'Ваша должность'},
+                {'type':'email','label':'Адрес e-mail'},
+                {'type':'tel','label':'Телефон'}
+
+            ] %}
+            <div class="b-block-grid__item">
+                <label class="registration__label">
+                    <input type="{{ input.type }}" class="registration__field" required>
+                    <span class="registration__placeholder">{{ input.label }}<em>*</em></span>
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="b-content__desc b-ta_center">
+            <p>Вы уже брали льготные займы под 10% годовых в Фонде поддержки предпринимательства?</p>
+        </div>
+
+        <div class="b-space_xs"></div>
+
+        <div class="b-select">
+            <select>
+                <option value="yes" selected>Да</option>
+                <option value="no">Нет</option>
+            </select>
+        </div>
+
+        <div class="b-space_xs"></div>
+
+        <div class="b-content__desc b-ta_center">
+            <p>Мероприятие, в котором вы бы хотели принять участие</p>
+        </div>
+
+        <div class="b-space_xs"></div>
+
+        <div class="b-select">
+            <select>
+                <option value="" selected>“Упаковка бизнеса в фрашизу”</option>
+                <option value="">Lorem ipsum dolor.</option>
+                <option value="">Lorem ipsum dolor.</option>
+                <option value="">Lorem ipsum dolor.</option>
+                <option value="">Lorem ipsum dolor.</option>
+            </select>
+        </div>
+
+        <div class="b-space_xs"></div>
+
+        <div class="b-content__desc b-ta_center">
+            <p>Введите символы с картинки</p>
+        </div>
+
+        <div class="b-space_xs"></div>
+
+        <div class="b-row">
+            <div class="b-col_small_6">
+                <input type="text" class="registration__field">
+            </div>
+            <div class="b-col_small_6"></div>
+        </div>
+
+        <div class="b-space_sm"></div>
+
+        <input type="submit" class="b-modal__submit" value="Отправить заявку">
+
+        <div class="b-space_sm"></div>
+
+        <label class="app__checkbox">
+            <input type="checkbox">
+            <i></i>
+            <span>Заполняя форму, я согласен получать информационную рассылку от проекта и партнеров проекта, а также сокласен с политикой конфиденциальности</span>
+        </label>
+    </form>
+
+</div>

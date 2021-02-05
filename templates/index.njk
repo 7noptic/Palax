@@ -1,0 +1,647 @@
+{% extends 'base.njk' %}
+
+{% set pageName = 'Главная' %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="main b-bg" style="background-image: url('./assets/images/bg/main-bg.jpg')">
+        <div class="content">
+            <div class="b-hero-info">
+                <div class="b-hero-info__logo">
+                    <img src="./assets/images/logo-hero.png" alt="мойбизнес">
+                </div>
+
+                <div class="b-hero-info__desc">
+                    <p>Центр «Мой бизнес» оказывает государственную поддержку предпринимателям в создании и развитии
+                        бизнеса на любой стадии. Основная цель организации – сделать удобную систему для бизнеса,
+                        позволяющую максимизировать получение финансовой поддержки, а также предоставлять услуги,
+                        наиболее востребованные предпринимателями при открытии, расширении бизнеса и выходе на
+                        экспорт.</p>
+                </div>
+            </div>
+
+            <div class="b-space"></div>
+
+            <div class="types__list b-visible_large_up">
+                {% for type in [
+
+                    {'icon':'cash-more','href':'types-2','title':'Финансовая\nподдержка'},
+                    {'icon':'graph','href':'growing-about','title':'Центр поддержки\nпредпринимательства'},
+                    {'icon':'arator','href':'cluster-about','title':'Центр кластерного\nразвития'},
+                    {'icon':'export','href':'export-about','title':'Центр поддержки\nэкспорта'},
+                    {'icon':'economy','href':'','title':'Министерство\nэкономического развития и поддержки\nпредпринимательства Кировской области'},
+                    {'icon':'shield','href':'','title':'Уполномоченный\nпо защите прав предпринимателей'},
+                    {'icon':'brush','href':'','title':'Народно-художественные\nпромыслы'}
+
+                ] %}
+                <a href="{{ type.href }}.html" class="types__item">
+                    <span class="types__item-wr">
+                        <span class="types__item-content">
+                            {{ macros.svgIcon(type.icon) }}
+                            <span class="types__item-title">{{ type.title | striptags(true) | escape | nl2br }}</span>
+                        </span>
+                    </span>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="types content b-hide_large_up">
+        <h2 class="block-title types__title">
+            <i>
+                <i class="icon icon-title-1"></i>
+            </i>
+            <span>ВОЗМОЖНОСТИ ДЛЯ ВАС И ВАШЕГО БИЗНЕСА</span>
+        </h2>
+
+        <div class="types__list">
+            <a href="types-2.html" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                       {{ macros.svgIcon('cash-more') }}
+                        <span class="types__item-title">
+                            Финансовая
+                            <span class="br">поддержка</span>
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="#" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        {{ macros.svgIcon('graph') }}
+                        <span class="types__item-title">
+                            Центр поддержки
+                            <span class="br">предпринимательства</span>
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="#" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        {{ macros.svgIcon('arator') }}
+                        <span class="types__item-title">
+                            Центр кластерного
+                            <span class="br">развития</span>
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="#" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        {{ macros.svgIcon('export') }}
+                        <span class="types__item-title">
+                            Центр поддержки
+                            <span class="br">экспорта</span>
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="#" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                       {{ macros.svgIcon('economy') }}
+                        <span class="types__item-title">
+                            Министерство
+                            <span class="br">экономического</span>
+                            развития и поддержки
+                            <span class="br">предпринимательства</span>
+                            Кировской области
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="#" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        {{ macros.svgIcon('shield') }}
+                        <span class="types__item-title">
+                            Уполномоченный
+                            <span class="br">по защите прав</span>
+                            предпринимателей
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+
+            <a href="#" class="types__item">
+                <span class="types__item-wr">
+                    <span class="types__item-content">
+                        {{ macros.svgIcon('brush') }}
+                        <span class="types__item-title">
+                            Народно-
+                            <span class="br">художественные</span>
+                            промыслы
+                        </span>
+
+                    </span>
+
+                    <span class="types__item-desc">
+                        Займы бизнесу и поручительство по банковским кредитам
+                        субъектов малого и среднего препринимательства
+                    </span>
+
+                </span>
+
+            </a>
+        </div>
+
+    </section>
+
+    <section class="news content">
+        <h2 class="block-title news__title">
+            <i>
+                <i class="icon icon-title-2"></i>
+            </i>
+            <span>Новости</span>
+        </h2>
+
+        <div class="news__slider">
+            <div class="news__slides">
+                <div class="news__slide">
+                    <div class="news__item">
+                        <a href="#" class="news__item-bookmark">
+                            {{ macros.svgIcon('bookmark','red','','pos-center') }}
+                        </a>
+
+                        <div class="news__item-photo">
+                            <img src="./assets/images/news/news-1.jpg" alt="Фото">
+                        </div><!--news__item-photo-->
+
+                        <div class="news__item-content">
+                            <a href="#" class="news__item-title">
+                                Предпринимателей приглашают
+                                принять участие в обсуждении
+                                развития Арктики
+                            </a>
+
+                            <p class="news__item-desc">
+                                С 19 по 20 февраля 2020 года в Москве
+                                состоится V международная конференция «Арктика:
+                                шельфовые проекты и устойчивое развитие регионов».
+                            </p>
+
+                        </div><!--news__item-content-->
+
+                    </div><!--news__item-->
+
+                </div>
+
+                <div class="news__slide">
+                    <div class="news__item">
+                        <a href="#" class="news__item-bookmark">
+                            {{ macros.svgIcon('bookmark','red','','pos-center') }}
+                        </a>
+
+                        <div class="news__item-photo">
+                            <img src="./assets/images/news/news-1.jpg" alt="Фото">
+                        </div><!--news__item-photo-->
+
+                        <div class="news__item-content">
+                            <a href="#" class="news__item-title">
+                                Предпринимателей приглашают
+                                принять участие в обсуждении
+                                развития Арктики
+                            </a>
+
+                            <p class="news__item-desc">
+                                С 19 по 20 февраля 2020 года в Москве
+                                состоится V международная конференция «Арктика:
+                                шельфовые проекты и устойчивое развитие регионов».
+                            </p>
+
+                        </div><!--news__item-content-->
+
+                    </div><!--news__item-->
+
+                </div>
+
+                <div class="news__slide">
+                    <div class="news__item">
+                        <a href="#" class="news__item-bookmark">
+                            {{ macros.svgIcon('bookmark','red','','pos-center') }}
+                        </a>
+
+                        <div class="news__item-photo">
+                            <img src="./assets/images/news/news-1.jpg" alt="Фото">
+                        </div><!--news__item-photo-->
+
+                        <div class="news__item-content">
+                            <a href="#" class="news__item-title">
+                                Предпринимателей приглашают
+                                принять участие в обсуждении
+                                развития Арктики
+                            </a>
+
+                            <p class="news__item-desc">
+                                С 19 по 20 февраля 2020 года в Москве
+                                состоится V международная конференция «Арктика:
+                                шельфовые проекты и устойчивое развитие регионов».
+                            </p>
+
+                        </div><!--news__item-content-->
+
+                    </div><!--news__item-->
+
+                </div>
+
+                <div class="news__slide">
+                    <div class="news__item">
+                        <a href="#" class="news__item-bookmark">
+                            {{ macros.svgIcon('bookmark','red','','pos-center') }}
+                        </a>
+
+                        <div class="news__item-photo">
+                            <img src="./assets/images/news/news-1.jpg" alt="Фото">
+                        </div><!--news__item-photo-->
+
+                        <div class="news__item-content">
+                            <a href="#" class="news__item-title">
+                                Предпринимателей приглашают
+                                принять участие в обсуждении
+                                развития Арктики
+                            </a>
+
+                            <p class="news__item-desc">
+                                С 19 по 20 февраля 2020 года в Москве
+                                состоится V международная конференция «Арктика:
+                                шельфовые проекты и устойчивое развитие регионов».
+                            </p>
+
+                        </div><!--news__item-content-->
+
+                    </div><!--news__item-->
+
+                </div>
+
+                <div class="news__slide">
+                    <div class="news__item">
+                        <a href="#" class="news__item-bookmark">
+                            {{ macros.svgIcon('bookmark','red','','pos-center') }}
+                        </a>
+
+                        <div class="news__item-photo">
+                            <img src="./assets/images/news/news-1.jpg" alt="Фото">
+                        </div><!--news__item-photo-->
+
+                        <div class="news__item-content">
+                            <a href="#" class="news__item-title">
+                                Предпринимателей приглашают
+                                принять участие в обсуждении
+                                развития Арктики
+                            </a>
+
+                            <p class="news__item-desc">
+                                С 19 по 20 февраля 2020 года в Москве
+                                состоится V международная конференция «Арктика:
+                                шельфовые проекты и устойчивое развитие регионов».
+                            </p>
+
+                        </div><!--news__item-content-->
+
+                    </div><!--news__item-->
+
+                </div>
+
+                <div class="news__slide">
+                    <div class="news__item">
+                        <a href="#" class="news__item-bookmark">
+                            {{ macros.svgIcon('bookmark','red','','pos-center') }}
+                        </a>
+
+                        <div class="news__item-photo">
+                            <img src="./assets/images/news/news-1.jpg" alt="Фото">
+                        </div><!--news__item-photo-->
+
+                        <div class="news__item-content">
+                            <a href="#" class="news__item-title">
+                                Предпринимателей приглашают
+                                принять участие в обсуждении
+                                развития Арктики
+                            </a>
+
+                            <p class="news__item-desc">
+                                С 19 по 20 февраля 2020 года в Москве
+                                состоится V международная конференция «Арктика:
+                                шельфовые проекты и устойчивое развитие регионов».
+                            </p>
+
+                        </div><!--news__item-content-->
+
+                    </div><!--news__item-->
+
+                </div>
+
+            </div>
+
+        </div><!--news__slider-->
+
+    </section>
+
+    {% include 'parts/_registration.njk' %}
+
+    <section class="events content">
+        <h2 class="block-title events__title">
+            <i>
+                <i class="icon icon-title-3"></i>
+            </i>
+            <span>Календарь событий</span>
+        </h2>
+
+        <div class="events__slider">
+            <ul class="events__slides">
+                <li class="events__slide">
+                    <div class="events__item va-middle">
+                        <span class="events__item-month">Сентябрь</span>
+                        <span class="events__item-day">9</span>
+                        <a href="#" class="events__item-send">
+                            {{ macros.svgIcon('envelope-send', 'white', '', 'pos-center') }}
+                        </a>
+
+                        <div class="events__item-right">
+                            <p class="events__item-date">
+                                <span>2019-09-09</span> <span>09:37:46</span>
+                            </p>
+
+                            <a href="#" class="events__item-title">
+                                СУБСИДИИ БИЗНЕСУ
+                            </a>
+
+                            <div class="tags">
+                                <a href="#" class="tags__tag">#субсидии</a>
+                                <a href="#" class="tags__tag">#бизнес</a>
+                                <a href="#" class="tags__tag">#мойбизнес22</a>
+                            </div><!--tags-->
+
+                        </div><!--events__item-right-->
+
+                    </div><!--events__item-->
+
+                </li>
+
+                <li class="events__slide">
+                    <div class="events__item va-middle">
+                        <span class="events__item-month">Сентябрь</span>
+                        <span class="events__item-day">10</span>
+                        <a href="#" class="events__item-send">
+                            {{ macros.svgIcon('envelope-send', 'white', '', 'pos-center') }}
+                        </a>
+
+                        <div class="events__item-right">
+                            <p class="events__item-date">
+                                <span>2019-09-09</span> <span>09:37:46</span>
+                            </p>
+
+                            <a href="#" class="events__item-title">
+                                ПЕРВАЯ РАБОЧАЯ ВСТРЕЧА
+                                КОМИТЕТА ПО ЖЕНСКОМУ
+                                ПРЕДПРИНИМАТЕЛЬСТВУ
+                            </a>
+
+                            <div class="tags">
+                                <a href="#" class="tags__tag">#субсидии</a>
+                                <a href="#" class="tags__tag">#бизнес</a>
+                                <a href="#" class="tags__tag">#мойбизнес22</a>
+                            </div><!--tags-->
+
+                        </div><!--events__item-right-->
+
+                    </div><!--events__item-->
+
+                </li>
+
+                <li class="events__slide">
+                    <div class="events__item va-middle">
+                        <span class="events__item-month">Сентябрь</span>
+                        <span class="events__item-day">9</span>
+                        <a href="#" class="events__item-send">
+                            {{ macros.svgIcon('envelope-send', 'white', '', 'pos-center') }}
+                        </a>
+
+                        <div class="events__item-right">
+                            <p class="events__item-date">
+                                <span>2019-09-09</span> <span>09:37:46</span>
+                            </p>
+
+                            <a href="#" class="events__item-title">
+                                СУБСИДИИ БИЗНЕСУ
+                            </a>
+
+                            <div class="tags">
+                                <a href="#" class="tags__tag">#субсидии</a>
+                                <a href="#" class="tags__tag">#бизнес</a>
+                                <a href="#" class="tags__tag">#мойбизнес22</a>
+                            </div><!--tags-->
+
+                        </div><!--events__item-right-->
+
+                    </div><!--events__item-->
+
+                </li>
+
+                <li class="events__slide">
+                    <div class="events__item va-middle">
+                        <span class="events__item-month">Сентябрь</span>
+                        <span class="events__item-day">9</span>
+                        <a href="#" class="events__item-send">
+                            {{ macros.svgIcon('envelope-send', 'white', '', 'pos-center') }}
+                        </a>
+
+                        <div class="events__item-right">
+                            <p class="events__item-date">
+                                <span>2019-09-09</span> <span>09:37:46</span>
+                            </p>
+
+                            <a href="#" class="events__item-title">
+                                СУБСИДИИ БИЗНЕСУ
+                            </a>
+
+                            <div class="tags">
+                                <a href="#" class="tags__tag">#субсидии</a>
+                                <a href="#" class="tags__tag">#бизнес</a>
+                                <a href="#" class="tags__tag">#мойбизнес22</a>
+                            </div><!--tags-->
+
+                        </div><!--events__item-right-->
+
+                    </div><!--events__item-->
+
+                </li>
+
+                <li class="events__slide">
+                    <div class="events__item va-middle">
+                        <span class="events__item-month">Сентябрь</span>
+                        <span class="events__item-day">9</span>
+                        <a href="#" class="events__item-send">
+                            {{ macros.svgIcon('envelope-send', 'white', '', 'pos-center') }}
+                        </a>
+
+                        <div class="events__item-right">
+                            <p class="events__item-date">
+                                <span>2019-09-09</span> <span>09:37:46</span>
+                            </p>
+
+                            <a href="#" class="events__item-title">
+                                ПЕРВАЯ РАБОЧАЯ ВСТРЕЧА
+                                КОМИТЕТА ПО ЖЕНСКОМУ
+                                ПРЕДПРИНИМАТЕЛЬСТВУ
+                            </a>
+
+                            <div class="tags">
+                                <a href="#" class="tags__tag">#субсидии</a>
+                                <a href="#" class="tags__tag">#бизнес</a>
+                                <a href="#" class="tags__tag">#мойбизнес22</a>
+                            </div><!--tags-->
+
+                        </div><!--events__item-right-->
+
+                    </div><!--events__item-->
+
+                </li>
+
+                <li class="events__slide">
+                    <div class="events__item va-middle">
+                        <span class="events__item-month">Сентябрь</span>
+                        <span class="events__item-day">9</span>
+                        <a href="#" class="events__item-send">
+                            {{ macros.svgIcon('envelope-send', 'white', '', 'pos-center') }}
+                        </a>
+
+                        <div class="events__item-right">
+                            <p class="events__item-date">
+                                <span>2019-09-09</span> <span>09:37:46</span>
+                            </p>
+
+                            <a href="#" class="events__item-title">
+                                СУБСИДИИ БИЗНЕСУ
+                            </a>
+
+                            <div class="tags">
+                                <a href="#" class="tags__tag">#субсидии</a>
+                                <a href="#" class="tags__tag">#бизнес</a>
+                                <a href="#" class="tags__tag">#мойбизнес22</a>
+                            </div><!--tags-->
+
+                        </div><!--events__item-right-->
+
+                    </div><!--events__item-->
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <section class="question content">
+        <form action=".php" class="question__form">
+            <div class="question__center">
+                <p class="question__title">Остались вопросы? Задайте их нам!</p>
+
+                {#<div class="b-flashes">
+                    <div class="b-flashes__error">Error number 1</div>
+                    <div class="b-flashes__error">Error number 2</div>
+                    <div class="b-flashes__error">Error number 3</div>
+                </div>
+
+                <div class="b-flashes">
+                    <div class="b-flashes__success">Congratulations! Your message is send</div>
+                </div>#}
+
+                <div class="question__fields spacer">
+                    <div class="question__col">
+                        <input type="text" name="name" class="question__field" placeholder="ИМЯ">
+                        <input type="text" name="phone" class="question__field" placeholder="ТЕЛЕФОН">
+                    </div><!--question__col-->
+
+                    <div class="question__col">
+                        <textarea name="message" class="question__field question__field_text"
+                                  placeholder="СООБЩЕНИЕ..."></textarea>
+                    </div><!--question__col-->
+
+                </div><!--question__fields-->
+
+                <div class="question__bottom">
+                    <label class="question__privacy">
+                        <input type="checkbox">
+                        <i></i>
+                        <span>
+                            Настоящим я даю согласие на обработку моих
+                            персональных данных в порядке, установленном
+                            Федеральным Законом № 152-ФЗ "О защите
+                            персональных данных"
+                        </span>
+                    </label>
+
+                    <button class="question__btn">Отправить сообщение</button>
+
+                </div><!--question__bottom-->
+
+            </div><!--question__center-->
+
+        </form>
+
+    </section>
+
+    <a href="#cookie" class="js-modal-open">open cookie modal</a>
+
+{% endblock content %}

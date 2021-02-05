@@ -1,0 +1,27 @@
+{% extends 'base.njk' %}
+
+{% set pageName = '404' %}
+
+{% import 'components/_macros.njk' as macros %}
+
+{% block content %}
+
+    <section class="page content b-ta_center">
+        <div class="b-space_sm"></div>
+
+        <h1 class="b-h3 b-fw_600">Упс, что то пошло не так и страница не нашлась</h1>
+
+        <div class="b-space_sm"></div>
+
+        <div class="b-content__description">
+            <p>Проверьте нет ли ошибки в пути и попробуйте еще раз</p>
+        </div>
+
+        <div class="b-space_sm"></div>
+
+        <a class="b-btn b-btn_red b-btn_shadow b-btn_h49" href="index.html">На главную</a>
+
+        <div class="b-space_sm"></div>
+    </section>
+
+{% endblock content %}
